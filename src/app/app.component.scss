@@ -1,79 +1,117 @@
 mat-toolbar {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  
+  .logo {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  nav {
     display: flex;
-    align-items: center;
-    padding: 0 16px;
+    gap: 16px;
+  }
   
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-    }
+  button[mat-icon-button] {
+    display: none;
+  }
   
-    .spacer {
-      flex: 1;
-    }
-  
+  @media (max-width: 768px) {
     nav {
-      display: flex;
-      gap: 16px;
-    }
-  
-    button[mat-icon-button] {
       display: none;
     }
   
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-  
-      button[mat-icon-button] {
-        display: block;
-      }
+    button[mat-icon-button] {
+      display: block;
     }
   }
-  .portfolio-container {
-    display: flex;
-    justify-content: space-between;  
-    align-items: center;
-    margin-top: 40px;
-  }
-  
-  .info-container {
-    max-width: 50%;
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
+}
 
-  .content-container {
-    display: flex;
-    align-items: center; 
-    gap: 20px; 
-    padding: 20px;
-  }
-  
-  .video {
-    width: 300px; 
-    border-radius: 10px;
-  }
-  
-  .minha-foto {
-    width: 200px; 
-    border-radius: 50%;
-    height: 180px;
-    object-fit: cover;
-    border: 3px solid #333;
-  }
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  text-align: center;
+}
 
-  .form-container {
-    margin-top: 30px; 
-    display: flex;
-    justify-content: center; 
-  }
+.info-container {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.video {
+  width: 600px; /* Aumentando o tamanho do vídeo */
+  height: auto;
+  border-radius: 10px;
+}
+
+.minha-foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+  position: absolute; /* Foto fixada no canto direito */
+  top: 50%; /* Posiciona no meio verticalmente */
+  right: 20px; /* Distância do lado direito */
+  transform: translateY(-50%); /* Ajusta a posição vertical para centralizar */
+}
+
+.form-container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; /* Organiza os elementos do formulário verticalmente */
+  justify-content: center;
+  width: 100%;
+  max-width: 400px; /* Limita a largura máxima do formulário */
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Organiza os campos do formulário em coluna */
+  gap: 15px; /* Espaço entre os campos do formulário */
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: #3f51b5;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #303f9f;
+}
