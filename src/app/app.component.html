@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <span class="logo">Meu Portfólio</span>
+
+  <span class="spacer"></span>
+
+  <nav>
+    <button mat-button>Sobre</button>
+    <button mat-button>Projetos</button>
+    <button mat-button>Contato</button>
+  </nav>
+
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<div class="portfolio-container">
+  <div class="info-container">
+    <h1>Olá, Eu sou Paulo Douglas</h1>
+    <p>Sou um desenvolvedor iniciante, tenho alguns projetos provenientes de cursos</p>
+    <button mat-button>Ver Projetos</button>
+  </div>
+  <div class="content-container">
+    <video controls class="video">
+      <source src="https://www.youtube.com/watch?v=oos0QhttTLA" type="video/mp4">
+      Seu navegador não suporta o vídeo.
+    </video>
+    
+    <img src="https://avatars.githubusercontent.com/u/63628327?s=400&u=c9cc7690b4fd53ae43f95297d7ddfecc2482b6bd&v=4" alt="Minha Foto" class="minha-foto">
+  </div>
+<button (click)="toggleTheme()">Alternar Tema</button>
+
+<div class="form-container">
+  <app-contact-form></app-contact-form>
+</div>

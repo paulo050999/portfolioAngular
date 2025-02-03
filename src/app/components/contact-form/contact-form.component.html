@@ -1,0 +1,14 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="name">Nome:</label>
+    <input id="name" formControlName="name" required>
+  
+    <label for="email">E-mail:</label>
+    <input id="email" type="email" formControlName="email" required>
+  
+    <label for="message">Mensagem:</label>
+    <textarea id="message" formControlName="message" required></textarea>
+  
+    <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+  </form>
+  
+  <p *ngIf="messageSent">Mensagem enviada com sucesso!</p>

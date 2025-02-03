@@ -1,0 +1,79 @@
+mat-toolbar {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+  
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    .spacer {
+      flex: 1;
+    }
+  
+    nav {
+      display: flex;
+      gap: 16px;
+    }
+  
+    button[mat-icon-button] {
+      display: none;
+    }
+  
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+  
+      button[mat-icon-button] {
+        display: block;
+      }
+    }
+  }
+  .portfolio-container {
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;
+    margin-top: 40px;
+  }
+  
+  .info-container {
+    max-width: 50%;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .content-container {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+    padding: 20px;
+  }
+  
+  .video {
+    width: 300px; 
+    border-radius: 10px;
+  }
+  
+  .minha-foto {
+    width: 200px; 
+    border-radius: 50%;
+    height: 180px;
+    object-fit: cover;
+    border: 3px solid #333;
+  }
+
+  .form-container {
+    margin-top: 30px; 
+    display: flex;
+    justify-content: center; 
+  }
